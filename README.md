@@ -43,5 +43,5 @@ services:
 
 ### 捷径下载
 - [提交磁链到115](https://www.icloud.com/shortcuts/7ef65b68d71648478b635554ed842e5b)
-- [提交番号手动选种下载](https://www.icloud.com/shortcuts/c3cb1117b9524e39ae74daeea7f0bbbe)
-- [提交番号自动选种下载](https://www.icloud.com/shortcuts/558c3c56b7e24e7a88dfaadfade210d1)
+- [提交番号手动选种下载](https://www.icloud.com/shortcuts/58f6f77d023c4aab970d3bb123fb28d3)
+- [提交番号自动选种下载](https://www.icloud.com/shortcuts/aa13d08dfc404d7ba6630ef4b619160b)
