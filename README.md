@@ -20,6 +20,7 @@ docker run --name simple_115 \
     -e "CD2_USER=user" \                      # cd2的用户
     -e "CD2_PWD=passwd" \                     # cd2的密码
     -e "SAVE_PATH=/115/云下载" \               # 离线路径在cd2中的路径，可填写多个，用英文逗号隔开
+    -e "PROXY=http://127.0.0.1:6152" \        # 系统代理
     htnanako/simple_115
 ```
 
@@ -39,6 +40,7 @@ services:
       CD2_USER: user                    # cd2的用户
       CD2_PWD: passwd                   # cd2的密码
       SAVE_PATH: /115/云下载             # 离线路径在cd2中的路径，可填写多个，用英文逗号隔开
+      PROXY: http://127.0.0.1:6152      # 系统代理
 ```
 
 ### 捷径下载
