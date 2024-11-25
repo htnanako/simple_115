@@ -44,6 +44,39 @@ services:
       PROXY: http://127.0.0.1:6152      # 系统代理
 ```
 
+### 配置
+#### 配置文件在映射的data下的config/config.json
+> 第一次生成配置文件时，会将环境变量的值保存到配置文件中。
+> 
+> 请勿直接复制以下内容，json文件不允许注释。
+```json
+{
+    "common": {
+        "CD2_HOST": "",       # cd2的地址
+        "CD2_USER": "",       # cd2的用户
+        "CD2_PWD": "",        # cd2的密码
+        "SAVE_PATH": ""       # 离线路径在cd2中的路径，可填写多个，用英文逗号隔开
+    },
+    "PROXY": {
+        "PROXY": "",          # 系统代理
+        "timeout": 30         # 超时时间
+    },
+    "notify": {
+        "webhooks": {
+            "webhook_url": "",        # webhook通知地址
+            "webhook_method": "POST",         # webhook请求方式
+            "webhook_params": ""        # webhook请求额外的参数，键与值使用冒号(:)隔开，多组参数间使用英文逗号(,)隔开
+        }
+    },
+    "SHT": {
+        "ENABLE": true,        # SHT定时拉取功能开关，关闭修改为false
+        "TASK_CRON": "13 0 * * *",        # SHT定时任务cron五位表达式
+        "SHT_SAVE_PATH": "/115/测试路径/刮削前",        # SHT任务拉取保存的cd2目录
+        "SHT_CATE": "中文字幕,三级"         # SHT任务拉取的类型，共有以下可选，使用英文逗号(,)隔开。国产,动漫,三级,中文字幕,无码,亚洲有码,欧美无码,VR视频,亚洲无码,4K。
+    }
+}
+```
+
 ### 捷径下载
 - [提交磁链到115](https://www.icloud.com/shortcuts/7ef65b68d71648478b635554ed842e5b)
 - [提交番号手动选种下载](https://www.icloud.com/shortcuts/58f6f77d023c4aab970d3bb123fb28d3)
