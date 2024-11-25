@@ -11,6 +11,7 @@
 
 
 ### 安装
+> 0.8版本后不再需要环境变量
 #### DockerCli
 ```shell
 docker run --name simple_115 \
