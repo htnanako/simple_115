@@ -18,11 +18,6 @@ docker run --name simple_115 \
     -v ./data:/data \
     -p 5150:5150 \
     --restart unless-stopped \
-    -e "CD2_HOST=http://127.0.0.1:19798" \    # cd2的地址
-    -e "CD2_USER=user" \                      # cd2的用户
-    -e "CD2_PWD=passwd" \                     # cd2的密码
-    -e "SAVE_PATH=/115/云下载" \               # 离线路径在cd2中的路径，可填写多个，用英文逗号隔开
-    -e "PROXY=http://127.0.0.1:6152" \        # 系统代理
     htnanako/simple_115
 ```
 
@@ -37,12 +32,6 @@ services:
     ports:
       - 5150:5150
     restart: unless-stopped
-    environment:
-      CD2_HOST: http://127.0.0.1:19798  # cd2的地址
-      CD2_USER: user                    # cd2的用户
-      CD2_PWD: passwd                   # cd2的密码
-      SAVE_PATH: /115/云下载             # 离线路径在cd2中的路径，可填写多个，用英文逗号隔开
-      PROXY: http://127.0.0.1:6152      # 系统代理
 ```
 
 ### 配置
@@ -72,7 +61,7 @@ services:
     "SHT": {
         "ENABLE": true,        # SHT定时拉取功能开关，关闭修改为false
         "TASK_CRON": "13 0 * * *",        # SHT定时任务cron五位表达式
-        "SHT_SAVE_PATH": "/115/测试路径/刮削前",        # SHT任务拉取保存的cd2目录
+        "SHT_SAVE_PATH": "",        # SHT任务拉取保存的cd2目录
         "SHT_CATE": "中文字幕,三级"         # SHT任务拉取的类型，共有以下可选，使用英文逗号(,)隔开。国产,动漫,三级,中文字幕,无码,亚洲有码,欧美无码,VR视频,亚洲无码,4K。
     }
 }
