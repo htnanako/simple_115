@@ -42,13 +42,16 @@ services:
 ```json
 {
     "common": {
-        "CD2_HOST": "",       # cd2的地址
-        "CD2_USER": "",       # cd2的用户
-        "CD2_PWD": "",        # cd2的密码
-        "SAVE_PATH": ""       # 离线路径在cd2中的路径，可填写多个，用英文逗号隔开
+        "cd2_host": "",       # cd2的地址
+        "cd2_user": "",       # cd2的用户
+        "cd2_pwd": "",        # cd2的密码
+        "save_path": ""       # 离线路径在cd2中的路径，可填写多个，用英文逗号隔开
     },
-    "PROXY": {
-        "PROXY": "",          # 系统代理
+    "translate": {
+        "engine": "google"  # 翻译引擎，可选google/deeplx
+    },
+    "proxy": {
+        "proxy": "",          # 系统代理
         "timeout": 30         # 超时时间
     },
     "notify": {
@@ -58,11 +61,11 @@ services:
             "webhook_params": ""        # webhook请求额外的参数，键与值使用冒号(:)隔开，多组参数间使用英文逗号(,)隔开
         }
     },
-    "SHT": {
-        "ENABLE": true,        # SHT定时拉取功能开关，关闭修改为false
-        "TASK_CRON": "13 0 * * *",        # SHT定时任务cron五位表达式
-        "SHT_SAVE_PATH": "",        # SHT任务拉取保存的cd2目录
-        "SHT_CATE": "中文字幕,三级"         # SHT任务拉取的类型，共有以下可选，使用英文逗号(,)隔开。国产,动漫,三级,中文字幕,无码,亚洲有码,欧美无码,VR视频,亚洲无码,4K。
+    "sht": {
+        "enable": true,        # SHT定时拉取功能开关，关闭修改为false
+        "task_cron": "13 0 * * *",        # SHT定时任务cron五位表达式
+        "sht_save_path": "",        # SHT任务拉取保存的cd2目录
+        "sht_cate": "中文字幕,三级"         # SHT任务拉取的类型，共有以下可选，使用英文逗号(,)隔开。国产,动漫,三级,中文字幕,无码,亚洲有码,欧美无码,VR视频,亚洲无码,4K。
     }
 }
 ```
